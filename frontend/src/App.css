@@ -1,0 +1,515 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: white;
+  padding: 10px 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100%;
+  margin: 30px;
+}
+
+.logo img {
+  width: 33%;
+}
+
+.nav-links {
+  flex-grow: 1;
+  width: 97%;
+  display: flex;
+}
+
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.carousel-container {
+  margin: 0 auto;
+  padding: 0 0 24px 0;
+  width: 80%;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-image {
+  max-width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #F89424;
+}
+
+.nav-links a.active-link {
+  color: #F89424;
+}
+
+header .search-icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.App {
+  margin: 0 auto;
+}
+
+.contact{
+  margin-top: 30px;
+}
+
+.content-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px 20%;
+}
+
+
+main.classifieds {
+  flex: 2;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+aside.job-opportunities {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.classifieds h2, .b2b h2 , .job-opportunities h2 {
+  border-bottom: 2px solid #001b2e;
+  /* padding-bottom: 10px; */
+  margin-bottom: 20px;
+}
+
+.b2b-item{
+  display: flex;
+  justify-content: space-between;
+}
+
+.classifieds a{
+  text-decoration: none;
+}
+
+.classified-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.news-item, .cl-item, .job-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid gray;
+}
+
+.news-item img {
+  max-width: 90%;
+  border-radius: 5px;
+}
+
+
+.classified-item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.news-item h3, .classified-item h3, .job-item h3 {
+  margin: 10px 0;
+}
+
+.news-item1 {
+  display: flex;
+  align-items: center;
+}
+
+.news-item p, .classified-item p, .job-item p {
+  color: #555;
+}
+
+.news-item a, .classified-item a, .job-item a , .exelent p a {
+  color: #3E4A6B;
+  text-decoration: none;
+}
+
+.classifieds h2 {
+  color: #3E4A6B;
+}
+
+.news-item a:hover, .classified-item a:hover, .job-item a:hover {
+  text-decoration: underline;
+}
+
+.newsletter {
+  border: 1px solid #ddd;
+  margin-top: 10%;
+  padding: 20px;
+  background-color: #001B2E;
+  border-radius: 5px;
+  color: aliceblue;
+}
+
+.newsletter h2 {
+  margin-top: 0;
+}
+
+.newsletter h3 {
+  border-bottom: 2px solid white;
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.home {
+  display: flex;
+  /* padding: 10px 20%; */
+  gap: 38px;
+  margin: auto;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 92%;
+}
+
+.international img{
+  width: 100%;
+}
+
+.job-img{
+  display: flex;
+}
+
+.newsletter button {
+  padding: 10px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #B70000;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .content-container {
+    flex-direction: column;
+  }
+
+  main.classifieds, aside.job-opportunities {
+    width: 100%;
+  }
+
+  main {
+    padding: 0 10px;
+  }
+}
+
+/* Footer.css */
+
+.footer {
+  background-color: #021C31;
+  color: white;
+  padding: 30px 20%;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid red;
+  padding-top: 10px;
+}
+
+.linkedin-icon {
+  color: white;
+  font-size: 24px;
+}
+
+.linkedin-icon:hover {
+  color: #0077b5;
+}
+
+/* src/Carousel.css */
+.carousel {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.3s;
+}
+
+.carousel__btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel__btn--prev {
+  left: 0;
+}
+
+.carousel__btn--next {
+  right: 0;
+}
+
+.carousel__img {
+  height: 18vh;
+  width: 160px;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.latest-news h2, .JobOpportunithy > p {
+  border-bottom: 2px solid black;
+}
+
+.carousel__img:hover {
+  transform: scale(1.05);
+} 
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 50px 20%;
+}
+
+ .home {
+  flex-grow: 2;
+  display: flex;
+  /* padding: 20px; */
+  /* border-right: 1px solid #ddd; */
+} 
+
+.job-opportunities {
+  flex-grow: 1;
+  /* padding: 20px; */
+  width: 50%;
+  margin: auto;
+  margin-top: 0
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.home > * {
+  margin-bottom: 20px;
+}
+
+
+.job-opportunities > * {
+    /* margin-bottom: 73%; */
+    width: 80%;
+}
+.homee{
+  width: 60%;
+}
+
+.Header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.Footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  clear: both;
+}
+
+.Company {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.JobOpportunities {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.JobOpportunities > * {
+  margin-bottom: 20px;
+}
+
+.NewsDetails, .Classified, .Jobs {
+  padding: 20px;
+}
+
+.NewsDetails > h2, .Classified > h2, .Jobs > h2, .about > h2 , .expert > h2 , .events > h2 , .opportunity > h2 , .JobOpportunithy > h2 ,.classifiedss > h2{
+  font-size: 24px;
+  border-bottom: 2px solid black;
+  margin-bottom: 10px;
+}
+.manufacturing > h6 , .exelent > h6 , .joint h6{
+  font-size: 16px;
+  border-bottom: 2px solid black;
+  margin-bottom: 10px;
+}
+
+.opportunity,.opportunity-one,.opportunity-two,.jobdata{
+  border-bottom: 1px solid black;
+}
+
+.jobdata{
+  display: flex;
+  align-items: center;
+}
+
+.opportunity a,.opportunity-one a,.opportunity-two a, .about a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-links span {
+  cursor: pointer;
+}
+
+.NewsDetails > p, .Classified > p, .Jobs > p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+label input, label textarea {
+  width: 95%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+input[type='submit'] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type='submit']:hover {
+  background-color: #0056b3;
+}
+
+.cours{
+  padding: 0 20%;
+}
