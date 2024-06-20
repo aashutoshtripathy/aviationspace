@@ -22,6 +22,7 @@ import ClassifiedDetails from './components/ClassifiedDetails';
 import JobOpportunithy from './components/JobOpportunithy';
 import Newss from './components/Newss';
 import B2b from './components/B2b'
+import SeniorEngineer from './components/SeniorEngineer';
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
               <Route path="/newss" element={<Newss />} />
               <Route path='/jobs' element={<JobOpportunithy/>}/>
               <Route path='/b2b' element={<B2b/>}/>
+              <Route path='/senior-engineer' element={<SeniorEngineer/>}/>
               
 
               

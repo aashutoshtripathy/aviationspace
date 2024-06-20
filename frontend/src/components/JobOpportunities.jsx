@@ -2,6 +2,7 @@ import React from 'react';
 import Jobs from './Jobs';
 import Newsletter from './NewsLetter';
 import img from '../assets/Job opportunity logo.jpg';
+import { Link } from 'react-router-dom';
 
 
 const JobOpportunities = () => {
@@ -13,8 +14,9 @@ const JobOpportunities = () => {
         alt={`img`}
         title="Senior Engineer - Aerospace..."
         description="Wanted for the Aerospace Division of an Engineering Component Manufacturing Company..."
-        link="/jobs"
+        link="/senior-engineer"
       />
+      <Link to={`/jobs`}>Show more</Link>
       <Newsletter />
       <h2>AVIATIONSPACE CONNECT</h2>
       <Jobs

@@ -8,6 +8,17 @@ import aboutData from '../data/aboutData.js';
 import NewsData from '../data/NewsData.js';
 import classifiedData from '../data/ClassifiedData.js';
 import marketPlace from "../data/marketPlace.js";
+import seniorEngineer from "../data/seniorEngineer.js";
+import { fileURLToPath } from 'url';
+import path from 'path';
+import fs from 'fs';
+
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
+
+
+
+
 
 const contactUser = asyncHandler(async(req,res) => {
     try {
@@ -122,9 +133,38 @@ const b2bDataa = asyncHandler(async(req,res) => {
         return res.status(500).json(new ApiError(500,"error","Internal Server Error"))
     }
 })
-  
+
+
+
+
+const seniorr = asyncHandler(async (req, res) => {
+  try {
+    // Construct the correct path relative to the project root
+    const imagePath = path.join('/media/aashutosh/Local%20Disk%20:%20D/aviationspace/backend/src/assets/');
+    
+    // Log the image path for debugging
+    console.log('Image path:', imagePath);
+
+    // if (!fs.existsSync(imagePath)) {
+    //   console.error('Image not found at path:', imagePath);
+    //   return res.status(404).json(new ApiError(404, "error", "Image not found"));
+    // }
+
+    const seniorrr = {
+      ...seniorEngineer,
+      // image: `/assets/Job opportunity logo.jpg`, // Relative path to the image
+      image: imagePath,
+    };
+
+    return res.status(200).json(new ApiResponse(200, seniorrr, "ok"));
+  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json(new ApiError(500, "error", "Internal Server Error"));
+  }
+});
+
     
   
  
 
-export {contactUser , sender , aboutDataa , images , newsDataa , classifiedDataa , b2bDataa};
+export {contactUser , sender , aboutDataa , images , newsDataa , classifiedDataa , b2bDataa , seniorr };

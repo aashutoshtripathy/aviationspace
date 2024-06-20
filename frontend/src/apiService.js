@@ -36,3 +36,7 @@ export const classifiedData  = () => {
 export const b2bDataa  = () => {
   return apiClient.get('/b2bDataa');
 };
+
+export const seniorr  = () => {
+  return apiClient.get('/seniorr');
+};

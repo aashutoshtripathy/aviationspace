@@ -27,8 +27,13 @@ app.use(cookieParser())
 // const pathname = path.join(__dirname,"./assets/cousral")
 // app.use(express.static(pathname));
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
+
+// app.use('/assets', express.static(path.join('/media/aashutosh/Local%20Disk%20:%20D/aviationspace/backend/src/assets/', '../assets')));
+app.use('/assets', express.static('/media/aashutosh/Local%20Disk%20:%20D/aviationspace/backend/src/assets'));
+
+
 
 
 const transporter = nodemailer.createTransport({
@@ -39,7 +44,6 @@ const transporter = nodemailer.createTransport({
     },
   });
 
-  app.use('/images', express.static(path.join(__dirname, 'assets', 'cousral')));
 
 
 

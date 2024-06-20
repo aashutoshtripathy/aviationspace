@@ -69,12 +69,12 @@ function Newsletter() {
           disabled={isSubscribed}
           style={{
             backgroundColor: isSubscribed ? '#ccc' : '#007BFF',
-            color: isSubscribed ? '#666' : '#FFF',
+            color: isSubscribed ? '#FF0000' : '#FFF',
             cursor: isSubscribed ? 'not-allowed' : 'pointer',
             opacity: isSubscribed ? 0.6 : 1,
           }}
         >
-          {isSubscribed ? 'SUBSCRIBED' : 'SUBSCRIBE'}
+          {isSubscribed ? 'ALREADY SUBSCRIBED!' : 'SUBSCRIBE'}
         </button>
       </form>
     </div>
