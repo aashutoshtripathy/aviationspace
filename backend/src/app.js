@@ -24,14 +24,10 @@ app.use(express.urlencoded({extended: true, limit: "16kb"}))
 app.use(cookieParser())
 // app.use(bodyParser.json())
 
-// const pathname = path.join(__dirname,"./assets/cousral")
-// app.use(express.static(pathname));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
-
-// app.use('/assets', express.static(path.join('/media/aashutosh/Local%20Disk%20:%20D/aviationspace/backend/src/assets/', '../assets')));
-app.use('/assets', express.static('/media/aashutosh/Local%20Disk%20:%20D/aviationspace/backend/src/assets'));
+app.use('/downloads', express.static(path.join(__dirname, 'downloads')));
 
 
 
