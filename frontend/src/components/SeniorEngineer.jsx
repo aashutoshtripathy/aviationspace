@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { seniorr } from '../apiService';
+import '../../src/App.css'
+
 
 const SeniorEngineer = () => {
   const [loadData, setLoadData] = useState([]);
@@ -36,14 +38,46 @@ const SeniorEngineer = () => {
   if (error) {
     return <div>Error: {error.message}</div>; // Handle error state
   }
+
+  const email = loadData.email ? loadData.email : '';
+  const mailto = `mailto:${email}`;
+
+  const highlightText = (text) => {
+    const highlightWords = [
+      "Qualification:",
+      "Experience:",
+      "Knowledge in:",
+      "Responsible for:"
+    ];
+
+    let highlightedText = text;
+    highlightWords.forEach(word => {
+      const regex = new RegExp(`(${word})`, 'gi');
+      highlightedText = highlightedText.replace(regex, '<span class="highlight">$1</span>');
+    });
+
+    return highlightedText;
+  };
+
   return (
     <>
-        <h2>{loadData.tittle}</h2>
-        <img src={loadData.image} alt="Job Opportunity" />
-        {loadData.paragraph && loadData.paragraph.map((para, index) => (
-        <p key={index}>{para}</p>
-      ))}
-    </>
+    <h2>{loadData.tittle}</h2>
+    {loadData.image && <img src={`http://localhost:8000${loadData.image}`} alt="Job Opportunity" />}
+    {loadData.paragraph && loadData.paragraph.map((para, index) => {
+      const parts = para.split('Email your details to:');
+      return (
+        <p key={index}>
+          <span dangerouslySetInnerHTML={{ __html: highlightText(parts[0]) }}></span>
+          {parts[1] && (
+            <>
+              Email your details to: <a href={mailto}>{email}</a>
+              {parts[1]}
+            </>
+          )}
+        </p>
+      );
+    })}
+  </>
   )
 }
 
