@@ -7,6 +7,7 @@ import '../../src/App.css';
 import International from '../components/International';
 import InternationalData from '../data/InternationalData';
 
+
 const fadeIn = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { duration: 1 } },
