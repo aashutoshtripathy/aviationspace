@@ -34,7 +34,7 @@ const zoomIn = {
 };
 
 const Home = () => {
-  const [classifiedData, setClassifiedData] = useState([]);
+  const [ClassifiedData, setClassifiedData] = useState([]);
   const [newsData, setNewsData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -54,8 +54,11 @@ const Home = () => {
         const classifiedData = await classifiedResponse.json();
         const newsData = await newsResponse.json();
 
-        setClassifiedData(classifiedData.data);
-        setNewsData(newsData.data);
+        const classifiedDataArray = Object.values(classifiedData.data).filter(item => typeof item === 'object');
+        const newsDataArray = Object.values(newsData.data).filter(item => typeof item === 'object');
+
+        setClassifiedData(classifiedDataArray);
+        setNewsData(newsDataArray);
         setLoading(false);
       } catch (error) {
         console.error('Error:', error);
@@ -84,11 +87,13 @@ const Home = () => {
         variants={staggerContainer}
       >
         <motion.h2 variants={fadeIn}>LATEST NEWS</motion.h2>
-        {newsData.map((newsItem, index) => (
+        {newsData.map((newsItem, index) => {
+          const imagePath = newsItem.src ? `${import.meta.env.VITE_API_BASE_URL}/newsImages/${encodeURIComponent(newsItem.src)}` : null;
+          return(
           <motion.div key={index} variants={slideInUp}>
             <News
               id={newsItem.id}
-              src={newsItem.src}
+              src={imagePath}
               alt={newsItem.alt}
               title={newsItem.title}
               date={newsItem.date}
@@ -96,7 +101,8 @@ const Home = () => {
               description={newsItem.description}
             />
           </motion.div>
-        ))}
+          );
+        })}
       </motion.section>
 
       <motion.section
@@ -108,17 +114,20 @@ const Home = () => {
         <motion.h2 variants={fadeIn}>
           <Link to={`/classifiedss`}>CLASSIFIEDS</Link>
         </motion.h2>
-        {classifiedData.map((classifiedItem, index) => (
+        {ClassifiedData.map((classifiedItem, index) => {
+          const imagePath = classifiedItem.src ? `${import.meta.env.VITE_API_BASE_URL}/classifiedImages/${encodeURIComponent(classifiedItem.src)}` : null;
+          return (
           <motion.div key={index} variants={slideInUp}>
             <Classified
               id={classifiedItem.id}
               title={classifiedItem.title}
               description={classifiedItem.description}
-              src={classifiedItem.src}
+              src={imagePath}
               alt={classifiedItem.alt}
             />
           </motion.div>
-        ))}
+          );
+          })}
         <motion.div variants={zoomIn}>
           <Link> Show More</Link>
         </motion.div>
