@@ -17,7 +17,10 @@ const Newss = () => {
         }
         const data = await response.json();
         console.log('Data received:', data);
-        setNewsData(data.data);
+
+        const newsDataArray = Object.values(data.data).filter(item => typeof item === 'object');
+
+        setNewsData(newsDataArray);
         setLoading(false);
       } catch (error) {
         console.error('Error:', error);
@@ -37,19 +40,26 @@ const Newss = () => {
     return <div>Error: {error.message}</div>; // Handle error state
   }
 
+
+
   return (
     <>
       <div className='classifiedss'>
-        {newsData.map((item, index) => (
+        {newsData.map((item, index) => {
+         const imagePath = item.src ? `${import.meta.env.VITE_API_BASE_URL}/newsImages/${encodeURIComponent(item.src)}` : null;
+         return(
           <News
             key={index}
             title={item.title}
+            date={item.date}
+            location={item.location}
             description={item.description}
-            src={item.src}
+            src={imagePath}
             alt={item.alt}
             id={item.id}
           />
-        ))}
+          )
+})}
       </div>
     </>
   );
