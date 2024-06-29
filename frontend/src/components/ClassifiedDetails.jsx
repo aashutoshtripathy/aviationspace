@@ -1,7 +1,7 @@
 // NewsDetail.js
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import ClassifiedData from '../data/ClassifiedData'; 
+// import ClassifiedData from '../data/ClassifiedData'; 
 import '../../src/App.css'
 import { useState,useEffect } from 'react';
 
@@ -44,11 +44,14 @@ const ClassifiedDetails = () => {
     return <p>Error: {error.message}</p>;
   }
 
+  const imagePath = `${import.meta.env.VITE_API_BASE_URL}/classifiedImages/${encodeURIComponent(aboutData.src)}`;
+
+
   return (
     <div className='App'>
     <div className="news-detail" key={aboutData.id}>
       <h2>{aboutData.title}</h2>
-      <img src={aboutData.src} alt={aboutData.alt} />
+      <img src={imagePath} alt={aboutData.alt} />
       <p>{aboutData.date} - {aboutData.location}</p>
       <p>{aboutData.fdescription}</p>
     </div>
