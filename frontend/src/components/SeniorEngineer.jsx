@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { seniorr } from '../apiService';
-import '../../src/App.css'
-
+import '../../src/App.css';
 
 const SeniorEngineer = () => {
-  const [loadData, setLoadData] = useState([]);
+  const [loadData, setLoadData] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -61,24 +60,26 @@ const SeniorEngineer = () => {
 
   return (
     <>
-    <h2>{loadData.tittle}</h2>
-    {loadData.image && <img src={`http://localhost:8000${loadData.image}`} alt="Job Opportunity" />}
-    {loadData.paragraph && loadData.paragraph.map((para, index) => {
-      const parts = para.split('Email your details to:');
-      return (
-        <p key={index}>
-          <span dangerouslySetInnerHTML={{ __html: highlightText(parts[0]) }}></span>
-          {parts[1] && (
-            <>
-              Email your details to: <a href={mailto}>{email}</a>
-              {parts[1]}
-            </>
-          )}
-        </p>
-      );
-    })}
-  </>
-  )
+      <div className='senior-engineer'>
+        <h2>{loadData.tittle}</h2>
+        {loadData.image && <img src={`${import.meta.env.VITE_API_BASE_URL}${loadData.image}`} alt="Job Opportunity" />}
+        {loadData.paragraph && loadData.paragraph.map((para, index) => {
+          const parts = para.split('Email your details to:');
+          return (
+            <p key={index}>
+              <span dangerouslySetInnerHTML={{ __html: highlightText(parts[0]) }}></span>
+              {parts[1] && (
+                <>
+                  Email your details to: <a href={mailto}>{email}</a>
+                  {parts[1]}
+                </>
+              )}
+            </p>
+          );
+        })}
+      </div>
+    </>
+  );
 }
 
-export default SeniorEngineer
+export default SeniorEngineer;
