@@ -38,20 +38,26 @@ const Classifiedss = () => {
     return <p>Error: {error.message}</p>;
   }
 
+        
+
   return (
     <div className='classifiedss'>
       <h2>Classifieds</h2>
       <p>INTERESTED IN REACHING OUT TO THE AEROSPACE & DEFENCE INDUSTRIES? <Link to={'/contact'}>Contact us</Link> </p>
-      {aboutData.map((item, index) => (
+      {aboutData.map((item, index) => {
+                  const imagePath = item.src ? `${import.meta.env.VITE_API_BASE_URL}/classifiedImages/${encodeURIComponent(item.src)}` : null;
+                  console.log(item.src)
+        return(
         <Classified
           key={index}
           title={item.title}
           description={item.description}
-          src={item.src}
+          src={imagePath}
           alt={item.alt}
           id={item.id}
         />
-      ))}
+        )
+})}
     </div>
   );
 }
