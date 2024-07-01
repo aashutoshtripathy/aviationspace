@@ -38,7 +38,11 @@ body {
 .carousel-container {
   margin: 0 auto;
   padding: 0 0 24px 0;
-  width: 80%;
+  /* width: 80%; */
+}
+
+.carousel-container img{
+  width: 30%;
 }
 
 .carousel-slide {
@@ -108,7 +112,13 @@ aside.job-opportunities {
   border-radius: 5px;
 }
 
-.classifieds h2, .b2b h2 , .job-opportunities h2 {
+.highlight {
+  font-weight: bold;
+  color: #191919;
+}
+
+
+.classifieds h2, .b2b h2 , .job-opportunities h2 , .senior-engineer h2{
   border-bottom: 2px solid #001b2e;
   /* padding-bottom: 10px; */
   margin-bottom: 20px;
@@ -138,7 +148,9 @@ aside.job-opportunities {
   max-width: 90%;
   border-radius: 5px;
 }
-
+.news-detail img{
+  width: -webkit-fill-available;
+}
 
 .classified-item img {
   width: 150px;
@@ -338,7 +350,7 @@ aside.job-opportunities {
   transition: transform 0.3s ease-in-out;
 }
 
-.latest-news h2, .JobOpportunithy > p {
+.latest-news h2, .news-detail h2, .JobOpportunithy > p {
   border-bottom: 2px solid black;
 }
 
@@ -375,7 +387,8 @@ aside.job-opportunities {
   /* padding: 20px; */
   width: 50%;
   margin: auto;
-  margin-top: 0
+  margin-top: 0;
+  margin-bottom: 140px;
 }
 
 main {
@@ -448,7 +461,21 @@ main {
   border-bottom: 1px solid black;
 }
 
-.jobdata{
+.jobdata a{
+  text-decoration: none;
+  font-size: larger;
+  font-weight: bold;
+}
+
+
+.b2b-item a{
+  text-decoration: none;
+  font-size: larger;
+  font-weight: bold;
+}
+
+
+.jobdata {
   display: flex;
   align-items: center;
 }
@@ -511,5 +538,6 @@ input[type='submit']:hover {
 }
 
 .cours{
-  padding: 0 20%;
+  width: 60%;
+  margin: auto;
 }
