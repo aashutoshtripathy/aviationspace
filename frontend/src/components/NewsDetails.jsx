@@ -71,8 +71,15 @@ const NewsDetails = () => {
       <div className="news-detail" key={newsItem.id}>
         <h2>{newsItem.title}</h2>
         <img src={imagePath} alt={newsItem.alt} />
-        <p>{newsItem.date} - {newsItem.location}</p>
-        <p>{newsItem.fdescription}</p>
+        <p>{newsItem.location}</p>
+        {/* <p>{newsItem.date} - {newsItem.location}</p> */}
+        {Array.isArray(newsItem.fdescription) ? (
+          newsItem.fdescription.map((desc, index) => (
+            <p key={index}>{desc}</p>
+          ))
+        ) : (
+          <p>{newsItem.fdescription}</p>
+        )}
       </div>
     </div>
   );
