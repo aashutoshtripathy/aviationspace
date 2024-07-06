@@ -47,6 +47,7 @@ const Contact = () => {
   return (
     <>
     <div className='contact'>
+      <h2>Contact Us</h2>
     <form onSubmit={handleSubmit}>
     <label>Your Name 
       <input type='text' name='name' value={inpVal.name} onChange={(e) => handleChange('name',e.target.value)}/>
