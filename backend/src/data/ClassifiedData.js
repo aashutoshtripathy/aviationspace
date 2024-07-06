@@ -12,14 +12,14 @@ Interested parties may get in touch with:
 george@aviationspace.in
 
 Mob: +91 9449833927 to know more.`,
-        src: '../assets/classifiedImages/Safe investment.jpg',
+        src: 'Safe investment.jpg',
         alt: 'image'
     },
     {  
         id: '2',
         title: "SCALED AIRCRAFT MODELS",
         description: "High precision scaled models of Aircraft, Helicopters, Spacecraft, Defence equipment...",
-        src: '../assets/classifiedImages/Aircraft Model_0.jpg',
+        src: 'Aircraft Model_0.jpg',
         fdescription: `High precision scaled models of Aircraft, Helicopters, Spacecraft, Defence equipment, etc of different sizes are offered by Precision Model Designers to the customer's requirements. Please`,
         alt: 'image'
     },
