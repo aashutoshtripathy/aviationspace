@@ -9,12 +9,11 @@ import NewsData from '../data/NewsData.js';
 import classifiedData from '../data/ClassifiedData.js';
 import marketPlace from "../data/marketPlace.js";
 import seniorEngineer from "../data/seniorEngineer.js";
-import { fileURLToPath } from 'url';
-import path from 'path';
-import fs from 'fs';
+import Images from "../data/Images.js";
 
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
+
+
+
 
 
 
@@ -99,8 +98,14 @@ const aboutDataa = asyncHandler(async(req,res) => {
 
 const images = asyncHandler(async(req,res) => {
     try {
-        const imagess = ['1dcm_logo.gif', '3D%20CAD.png', '155176721066999965.png'];
-        return res.status(200).json(new ApiResponse(200,imagess,"ok"))
+      //   const images = ['1dcm_logo.gif', '3D%20CAD.png', '155176721066999965.png', '155256139637377397.jpg', '155256139637377397.png', 'Aamor%20final.jpg','Aditya_Precitech_logo_0.JPG'];
+      //   const imageUrls = images.map(image => `/cousral/${encodeURIComponent(image)}`);
+      //  console.log(imageUrls);
+      const imageUrls = Images.map(image => ({
+        name: `/cousral/${encodeURIComponent(image.name)}`,
+        link: image.link
+      }));
+        return res.status(200).json(new ApiResponse(200,imageUrls,"ok"))
 
     } catch (error) {
         return res.status(500).json(new ApiError(500,"error","Internal Server Error"))
@@ -109,22 +114,57 @@ const images = asyncHandler(async(req,res) => {
 
 const newsDataa = asyncHandler(async(req,res) => {
     try {
-        const newsDataaa = NewsData;
+      const imagePath = `/assets/${encodeURIComponent(NewsData.src)}`;
+      // console.log('Image path:', imagePath);
+  
+      // Construct the response object with the image URL
+      const newsDataaa = {
+        ...NewsData,
+        image: imagePath,
+      };
         return res.status(200).json(new ApiResponse(200,newsDataaa,"ok"))
     } catch (error) {
         return res.status(500).json(new ApiError(500,"error","Internal Server Error"))
     }
 })
 
-const classifiedDataa = asyncHandler(async(req,res) => {
+// const classifiedDataa = asyncHandler(async(req,res) => {
+//     try {
+//       const imagePath = `/classifiedImages/${encodeURIComponent(ClassifiedData.src)}`;
+//       console.log('Image path:', imagePath);
+
+//         // const classifiedDataaa = classifiedData;
+//         const classifiedDataaa = {
+//           ...classifiedData,
+//           image: imagePath,
+//         };
+//         return res.status(200).json(new ApiResponse(200,classifiedDataaa,"ok"))
+//     } catch (error) {
+//         return res.status(500).json(new ApiError(500,"error","Internal Server Error"))
+//     }
+// })
+
+
+  const classifiedDataa = asyncHandler(async (req, res) => {
     try {
-        const classifiedDataaa = classifiedData;
-        return res.status(200).json(new ApiResponse(200,classifiedDataaa,"ok"))
-    } catch (error) {
-        return res.status(500).json(new ApiError(500,"error","Internal Server Error"))
-    }
-})
+        // Assuming classifiedData is imported correctly and it contains the necessary data
+        const classifiedDataWithImagePaths = classifiedData.map(item => ({
+            ...item,
+            image: `/classifiedImages/${encodeURIComponent(item.src)}` // Assuming 'src' holds the image filename
+        }));
         
+        console.log('Classified Data with Image Paths:', classifiedDataWithImagePaths);
+
+        return res.status(200).json(new ApiResponse(200, classifiedDataWithImagePaths, "ok"));
+    } catch (error) {
+        console.error("Error:", error);
+        return res.status(500).json(new ApiError(500, "error", "Internal Server Error"));
+    }
+  });
+
+
+
+
 const b2bDataa = asyncHandler(async(req,res) => {
     try {
         const b2bDataaa = marketPlace;
@@ -136,30 +176,23 @@ const b2bDataa = asyncHandler(async(req,res) => {
 
 
 
-
 const seniorr = asyncHandler(async (req, res) => {
   try {
-    // Construct the correct path relative to the project root
-    const imagePath = path.join('/media/aashutosh/Local%20Disk%20:%20D/aviationspace/backend/src/assets/');
-    
-    // Log the image path for debugging
-    console.log('Image path:', imagePath);
+    const imagePath = `/assets/${encodeURIComponent(seniorEngineer.image)}`;
+    // console.log('Image path:', imagePath);
 
-    // if (!fs.existsSync(imagePath)) {
-    //   console.error('Image not found at path:', imagePath);
-    //   return res.status(404).json(new ApiError(404, "error", "Image not found"));
-    // }
-
+    // Construct the response object with the image URL
     const seniorrr = {
       ...seniorEngineer,
-      // image: `/assets/Job opportunity logo.jpg`, // Relative path to the image
       image: imagePath,
     };
+
+
 
     return res.status(200).json(new ApiResponse(200, seniorrr, "ok"));
   } catch (error) {
     console.error('Error:', error);
-    return res.status(500).json(new ApiError(500, "error", "Internal Server Error"));
+    return res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
