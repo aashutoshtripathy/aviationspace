@@ -1,21 +1,13 @@
-// import image1 from "../assets/aviation.jpg"
-// import image2 from "../assets/HAL Thejas.jpg"
-// import image3 from "../assets/missile.jpg"
-// import image4 from "../assets/Carl-Gustaf_M4_(2).jpg"
-// import image5 from "../assets/BUILD_National Finals_2023-24.jpeg"
-// import image6 from "../assets/Airbus.jpeg"
-// import image7 from "../assets/C295.jpg"
-
-
-
 const NewsData = [
   {
-    id: '0',
-    title: "Dr.Sathish Reddy honored by The Space Society of Mechanical Engineers.",
+    id: "0",
+    title:
+      "Dr.Sathish Reddy honored by The Space Society of Mechanical Engineers.",
     date: "Jun 06, 2024 .",
     location: "Ahmedabad",
-    description: "The Space Society of Mechanical Engineers (SSME), has conferred Dr. G. Satheesh Reddy, former...",
-    // src: image1,
+    description:
+      "The Space Society of Mechanical Engineers (SSME), has conferred Dr. G. Satheesh Reddy, former...",
+    src: `Dr.Reddy 1.jpg`,
     alt: "image",
     fdescription: `The Space Society of Mechanical Engineers (SSME), has conferred Dr. G. Satheesh Reddy, former Scientific Advisor to Raksha Mantri and President of AeSI, with Honorary Lifetime Membership at a function held in SAC, ISRO, Ahmedabad. The honor was presented in the presence of Shri S. Somanath, chairman of ISRO, and Dr. D.K. Singh, Associate Director of SAC, ISRO, to recognise Dr.Reddy's outstanding contributions to aerospace and defense technologies.
 
@@ -38,15 +30,16 @@ He is the first Indian in over 100 years to be conferred with the prestigious Ho
 For his sustained R&D contributions, he has been honored and inducted as Honorary Fellow, Honorary Member, Foreign Member, and Fellow, and also as part of Governing Bodies of over 35 scientific, professional, and academic institutions spread across India and abroad. He has been conferred with over 25 Honorary degrees of Doctorate from reputed institutes. Presently, he serves as a member of the Council of IISc, Bengaluru, and has previously served as a member of the Council of IITs. He was also a Special Invitee to the Prime Minister's Science, Technology, and Innovation Advisory Council (PM-STIAC), Government of India.
 
 On Date:
-Thursday, June 06, 2024`
+Thursday, June 06, 2024`,
   },
   {
-    id: '1',
+    id: "1",
     title: "JAPAN- INDIA INNOVATION PITCH",
     date: "Jun 04, 2024 .",
     location: "Bangalore",
-    description: "The Japan External Trade Organization (JETRO) Bengaluru with the Ministry of Economy, Trade &...",
-    // src: image2,
+    description:
+      "The Japan External Trade Organization (JETRO) Bengaluru with the Ministry of Economy, Trade &...",
+    src: `Jetro_0.jpg`,
     alt: "image",
     fdescription: `The Japan External Trade Organization (JETRO) Bengaluru with the Ministry of Economy, Trade & Industry of Japan, has announced the "Japan-India Innovation Pitch",a unique Japan-India cross-collaboration opportunity for startups from India & Japan. This program is supported by the Consulate General of Japan in Bengaluru & Start-up Karnataka.
 
@@ -74,15 +67,16 @@ E-mail: Dashmi_Parthan@jetro.go.jp
 
 On Date:
 Tuesday, June 04, 2024
-`
+`,
   },
   {
-    id: '2',
+    id: "2",
     title: "HAL awarded Outstanding Public Sector of the Year",
     date: "Apr 24, 2024",
     location: "Bangalore",
-    description: "DRDO's Aeronautical Development Agency (ADA) has handed over the first batch of the indigenous...",
-    // src: image3,
+    description:
+      "DRDO's Aeronautical Development Agency (ADA) has handed over the first batch of the indigenous...",
+    src: `HAL CMD receiving Outstanding PSU Award from Vice President.jpg`,
     alt: "image",
     fdescription: `Hon’ble Vice President of India Shri Jagdeep Dhankhar bestowed the 'Outstanding PSU of the Year’ award to HAL at AIMA’s Managing India Awards ceremony in Delhi yesterday night. The award was received by Shri C B Ananthakrishnan, CMD (Additional Charge), on behalf of HAL. He thanked AIMA for selecting HAL for the prestigious award.
 
@@ -103,16 +97,18 @@ Established in 1957, The All India Management Association (AIMA) is the Voice of
 HAL recorded the highest-ever revenue from operations of over Rs. 29,810 crores (provisional and unaudited) for the financial year ended on March 31, 2024, registering a double-digit growth of around 11% as against 9% in the previous financial year. The company maintained the growth momentum and has achieved an all-round improved performance in diverse areas.
 
 On Date:
-Wednesday, April 24, 2024`
+Wednesday, April 24, 2024`,
   },
   {
-    id: '3',
-    title: "Indigenous Leading Edge Actuators & Airbrake Control Module to HAL's for LCA Tejas Mk1A from DRDO.",
+    id: "3",
+    title:
+      "Indigenous Leading Edge Actuators & Airbrake Control Module to HAL's for LCA Tejas Mk1A from DRDO.",
     date: "Apr 19, 2024",
     location: "New Delhi",
-    description: "Defence Research and Development Organisation (DRDO) conducted a successful flight test of the...",
-    // src: image4,
-    alt: 'image',
+    description:
+      "Defence Research and Development Organisation (DRDO) conducted a successful flight test of the...",
+    src: `HAL Thejas.jpg`,
+    alt: "image",
     fdescription: `DRDO’s Aeronautical Development Agency (ADA) has handed over the first batch of the indigenous Leading Edge Actuators and Airbrake Control Module to Hindustan Aeronautics Limited (HAL), marking a significant leap towards self-reliance in aeronautical technologies. The HAL, Lucknow has already made preparations for the production of these units for the current 83 LCA Tejas Mk1A order.
 
 The Secondary Flight Control of LCA-Tejas, comprising Leading Edge Slats and Airbrakes, now boasts state-of-the-art Servo-Valve-based electro-hydraulic servo actuators and control modules. These high-pressure, redundant servo actuators and control modules, characterized by astute design, precision manufacturing, assembly, and testing, represent a culmination of ADA's relentless pursuit of indigenous technological prowess.
@@ -124,16 +120,18 @@ The production of these critical components is underway at the Accessories Divis
 Secretary, Department of Defence R&D and Chairman, DRDO, and DG-ADA congratulated the entire team of ADA, RCI, HAL, CMTI, and all participating industries for achieving this significant milestone.
 
 On Date:
-Friday, April 19, 2024`
+Friday, April 19, 2024`,
   },
   {
-    id: '4',
-    title: "Indigenous Technology Cruise Missile successfully flight-tested by DRDO",
+    id: "4",
+    title:
+      "Indigenous Technology Cruise Missile successfully flight-tested by DRDO",
     date: "Apr 18, 2024",
     location: "New Delhi",
-    description: "DRDO's Aeronautical Development Agency (ADA) has handed over the first batch of the indigenous...",
-    // src: image5,
-    alt: 'image',
+    description:
+      "DRDO's Aeronautical Development Agency (ADA) has handed over the first batch of the indigenous...",
+    src: `missile.jpg`,
+    alt: "image",
     fdescription: `Defence Research and Development Organisation (DRDO) conducted a successful flight test of the Indigenous Technology Cruise Missile (ITCM) from the Integrated Test Range (ITR), Chandipur off the coast of Odisha on April 18, 2024. During the test, all subsystems performed as per expectation. The missile performance was monitored by several Range Sensors like Radar, Electro Optical Tracking System (EOTS) and Telemetry deployed by ITR at different locations to ensure complete coverage of the flight path. The flight of the missile was also monitored from the Su-30-Mk-I aircraft of the Indian Air Force.
 
 A rocket launching with smoke and cloudsDescription automatically generated
@@ -149,16 +147,17 @@ Secretary Department of Defence R&D & Chairman DRDO Dr Samir V Kamat congratulat
  
 
 On Date:
-Thursday, April 18, 2024`
+Thursday, April 18, 2024`,
   },
   {
-    id: '5',
+    id: "5",
     title: "Swedish weapon Company SAAB to manufacture Carl-Gustaf M4 in India",
     date: "Mar 06, 2024",
     location: "Haryana",
-    description: "DRDO's Aeronautical Development Agency (ADA) has handed over the first batch of the indigenous...",
-    // src: image6,
-    alt: 'image',
+    description:
+      "DRDO's Aeronautical Development Agency (ADA) has handed over the first batch of the indigenous...",
+    src: `Carl-Gustaf_M4_(2).jpg`,
+    alt: "image",
     fdescription: `Swedish weapon manufacturer Saab has today marked the start of the construction of its new Carl-Gustaf® manufacturing facility in India with a groundbreaking ceremony. The factory will be located in the state of Haryana. 
 
 After receiving approval for 100% foreign direct investment, Saab has established a new company, Saab FFVO India Pvt Ltd, which will fully own the new manufacturing facility and produce the Carl-Gustaf M4 weapon.
@@ -180,16 +179,18 @@ Saab is a leading defence and security company with an enduring mission, to help
 and maintains advanced systems in aeronautics, weapons, command and control, sensors and underwater systems. Saab is headquartered in Sweden. It has major operations all over the world and is part of the domestic defence capability of several nations.
 
 On Date:
-Wednesday, March 06, 2024`
+Wednesday, March 06, 2024`,
   },
   {
-    id: '6',
-    title: "Winners of Boeing University Innovation Laeadership Development program announced",
+    id: "6",
+    title:
+      "Winners of Boeing University Innovation Laeadership Development program announced",
     date: "Feb 13, 2024 ",
     location: "Bangalore",
-    description: "Defence Research and Development Organisation (DRDO) conducted a successful flight test of the...",
-    // src: image7,
-    alt: 'image',
+    description:
+      "Defence Research and Development Organisation (DRDO) conducted a successful flight test of the...",
+    src: `BUILD_National Finals_2023-24.jpeg`,
+    alt: "image",
     fdescription: `Boeing announced seven teams comprising university students and early-stage start-up entrepreneurs as winners of the third edition of Boeing University Innovation Leadership Development (BUILD) program 2023-24.
 
 The seven winning teams are Abyom SpaceTech and Defence Pvt. Ltd. and Green Aero Propulsion Pvt. Ltd. from Foundation for Innovation and Technology Transfer (FIIT) – IIT Delhi, Glovatrix Pvt. Ltd. from Society for Innovation and Entrepreneurship (SINE) – IIT Mumbai, dVerse Technologies Pvt. Ltd. from IIT Madras Incubation Cell, Backyard Creators Pvt. Ltd., BONV Technology Private Limited and Coratia Technologies Pvt. Ltd. from Technology Business Incubator (TBI) – KIIT, Bhubaneswar. These winners will be further supported by Boeing and their respective incubator partners for over a few months to help develop their ideas into market-ready and viable business solutions.
@@ -211,14 +212,15 @@ Over the years, Boeing India has been helping contribute to skill development an
  
 
 On Date:
-Tuesday, February 13, 2024`
+Tuesday, February 13, 2024`,
   },
   {
-    id: '7',
+    id: "7",
     title: "Green Propulsion System - Big leap in Space Defence Technology",
     date: "Feb 01, 2024",
     location: "New Delhi",
-    description: "DRDO's Aeronautical Development Agency (ADA) has handed over the first batch of the indigenous...",
+    description:
+      "DRDO's Aeronautical Development Agency (ADA) has handed over the first batch of the indigenous...",
     fdescription: `A Green Propulsion System, developed under the Technology Development Fund (TDF) scheme of DRDO, has successfully demonstrated in-orbit functionality on a payload launched by PSLV C-58 mission. This project - 1N Class Green Monopropellant thruster for altitude control and orbit keeping of microsatellite - was sanctioned to a Bengaluru-based start-up Bellatrix Aerospace Pvt Ltd (Development Agency).
 
 The Telemetry Data from PSLV Orbital Experimental Module (POEM) at ISRO Telemetry, Tracking and Command Network (ISTRAC), Bengaluru has been validated with ground level solution and is found to have exceeded all performance parameters.
@@ -232,14 +234,16 @@ The TDF is a flagship program of the Ministry of Defence executed by DRDO under 
  
 
 On Date:
-Thursday, February 01, 2024`
+Thursday, February 01, 2024`,
   },
   {
-    id: '8',
-    title: "Rs 6.21 lakh crore allocation to Ministry of Defence in Interim Union Budget 2024-25",
+    id: "8",
+    title:
+      "Rs 6.21 lakh crore allocation to Ministry of Defence in Interim Union Budget 2024-25",
     date: "Feb 01, 2024",
     location: "New Delhi",
-    description: "Defence Research and Development Organisation (DRDO) conducted a successful flight test of the...",
+    description:
+      "Defence Research and Development Organisation (DRDO) conducted a successful flight test of the...",
     fdescription: `The Defence Budget has touched Rs 6,21,540.85 crore in the Financial Year 2024-25 with the twin objective of promoting self-reliance and exports. This comes out to be 13.04% of the total Union Budget, which was presented by Finance Minister Smt Nirmala Sitharaman in Parliament on February 01, 2024.
 
 The Ministry of Defence (MoD) continues to receive the highest allocation among the Ministries. The budgetary allocation to Defence for FY 24-25 is higher by approx. one lakh crore (18.35%)  over the allocation for FY 2022-23 and 4.72% more than the allocation for FY 23-24. Of this, a major share of 27.67% goes to capital, 14.82% for revenue expenditure on sustenance and operational preparedness, 30.68% for Pay and allowances, 22.72% for defence pensions and 4.11% for civil organisations under MoD.
@@ -295,14 +299,16 @@ On the increase of capital expenditure outlay, Shri Rajnath Singh described it a
  
 
 On Date:
-Thursday, February 01, 2024`
+Thursday, February 01, 2024`,
   },
   {
-    id: '9',
-    title: "India Will Lead South Asia To Become Fastest-Growing Commercial Aviation Market",
+    id: "9",
+    title:
+      "India Will Lead South Asia To Become Fastest-Growing Commercial Aviation Market",
     date: "Jan 19, 2024",
     location: "Hyderabad",
-    description: "DRDO's Aeronautical Development Agency (ADA) has handed over the first batch of the indigenous...",
+    description:
+      "DRDO's Aeronautical Development Agency (ADA) has handed over the first batch of the indigenous...",
     fdescription: `The Defence Budget has touched Rs 6,21,540.85 crore in the Financial Year 2024-25 with the twin objective of promoting self-reliance and exports. This comes out to be 13.04% of the total Union Budget, which was presented by Finance Minister Smt Nirmala Sitharaman in Parliament on February 01, 2024.
 
 The Ministry of Defence (MoD) continues to receive the highest allocation among the Ministries. The budgetary allocation to Defence for FY 24-25 is higher by approx. one lakh crore (18.35%)  over the allocation for FY 2022-23 and 4.72% more than the allocation for FY 23-24. Of this, a major share of 27.67% goes to capital, 14.82% for revenue expenditure on sustenance and operational preparedness, 30.68% for Pay and allowances, 22.72% for defence pensions and 4.11% for civil organisations under MoD.
@@ -358,53 +364,62 @@ On the increase of capital expenditure outlay, Shri Rajnath Singh described it a
  
 
 On Date:
-Thursday, February 01, 2024`
+Thursday, February 01, 2024`,
   },
   {
-    id: '10',
+    id: "10",
     title: "HAL and Airbus Sign Contract for Establishing Civil MRO at Nashik",
     date: "Nov 09, 2023",
     location: "Bangalore",
     description: "DRDO's Aeronautical Development Agency (ADA) has handed over the first batch of the indigenous...",
-    fdescription: `
-Boeing forecasts the South Asia region will become the fastest-growing commercial aviation market with more than 8% annual traffic growth over the next 20 years. Supported by a strong economy, India’s rapidly expanding middle class will drive growth in regional air travel.
+    fdescription: [
+      "Boeing forecasts the South Asia region will become the fastest-growing commercial aviation market with more than 8% annual traffic growth over the next 20 years. Supported by a strong economy, India’s rapidly expanding middle class will drive growth in regional air travel.",
+      "To meet rising passenger and cargo demand, South Asian carriers are projected to quadruple the size of their fleets over the next two decades. Carriers will require more than 2,700 new airplanes to address growth and fleet replacement, according to Boeing’s Commercial Market Outlook (CMO), an annual forecast of 20-year demand for commercial airplanes and related services.  ",
+      "“Indian low-cost carriers continue to stimulate demand and connect emerging regions with low fares, holding nearly a 90% share of all domestic seats in the region. This reflects the rapid pace of the region’s recovery and economic activity, as traffic and capacity now exceed pre-pandemic levels,” said Darren Hulst, Boeing vice president of Commercial Marketing.",
+      "“Similarly, long-haul traffic and capacity to and from India and South Asia lead the way globally, relative to 2019, as nonstop services to North America, Europe, East Asia and Oceania continue to be added. Strong economic growth and confidence in the commercial aviation market have led to record orders for new, more efficient airplanes in India.”",
+      "Aerospace customer requirements including reading and understanding component drawing. Deciding manufacturing processes including special processes Cost estimation",
+      "Responsible for: ",
+      "On-time delivery of parts Meeting quality requirements of Aerospace parts Sourcing of raw materials Outsourcing of special processes and follow-up with vendors. ",
+      "If you have the qualifications and experience for this position. Email your details to: ",
+      "Recently retired people with the above experience also could apply. We look forward to hearing from you!",
+      "Email your details to: "
+  ]
+//     fdescription: `
+// Boeing forecasts the South Asia region will become the fastest-growing commercial aviation market with more than 8% annual traffic growth over the next 20 years. Supported by a strong economy, India’s rapidly expanding middle class will drive growth in regional air travel.
 
-To meet rising passenger and cargo demand, South Asian carriers are projected to quadruple the size of their fleets over the next two decades. Carriers will require more than 2,700 new airplanes to address growth and fleet replacement, according to Boeing’s Commercial Market Outlook (CMO), an annual forecast of 20-year demand for commercial airplanes and related services.  
+// To meet rising passenger and cargo demand, South Asian carriers are projected to quadruple the size of their fleets over the next two decades. Carriers will require more than 2,700 new airplanes to address growth and fleet replacement, according to Boeing’s Commercial Market Outlook (CMO), an annual forecast of 20-year demand for commercial airplanes and related services.  
 
-“Indian low-cost carriers continue to stimulate demand and connect emerging regions with low fares, holding nearly a 90% share of all domestic seats in the region. This reflects the rapid pace of the region’s recovery and economic activity, as traffic and capacity now exceed pre-pandemic levels,” said Darren Hulst, Boeing vice president of Commercial Marketing.
+// “Indian low-cost carriers continue to stimulate demand and connect emerging regions with low fares, holding nearly a 90% share of all domestic seats in the region. This reflects the rapid pace of the region’s recovery and economic activity, as traffic and capacity now exceed pre-pandemic levels,” said Darren Hulst, Boeing vice president of Commercial Marketing.
 
-“Similarly, long-haul traffic and capacity to and from India and South Asia lead the way globally, relative to 2019, as nonstop services to North America, Europe, East Asia and Oceania continue to be added. Strong economic growth and confidence in the commercial aviation market have led to record orders for new, more efficient airplanes in India.”
+// “Similarly, long-haul traffic and capacity to and from India and South Asia lead the way globally, relative to 2019, as nonstop services to North America, Europe, East Asia and Oceania continue to be added. Strong economic growth and confidence in the commercial aviation market have led to record orders for new, more efficient airplanes in India.”
 
-The South Asia market is expected to quadruple its fleet over the next two decades to meet passenger demand. Boeing forecasts the region will require 37,000 pilots and 38,000 maintenance technicians over the next 20 years, driven primarily by growing demand in India.
+// The South Asia market is expected to quadruple its fleet over the next two decades to meet passenger demand. Boeing forecasts the region will require 37,000 pilots and 38,000 maintenance technicians over the next 20 years, driven primarily by growing demand in India.
 
-The South Asia CMO includes these projections through 2042:
+// The South Asia CMO includes these projections through 2042:
 
-Of 2,705 new deliveries, 72% will support fleet growth while 28% will replace older jets with more fuel-efficient models.
+// Of 2,705 new deliveries, 72% will support fleet growth while 28% will replace older jets with more fuel-efficient models.
 
-Single-aisle airplanes will account for more than 85% of new airplane deliveries.
+// Single-aisle airplanes will account for more than 85% of new airplane deliveries.
 
-Commercial airplane deliveries to India and South Asia (2023-2042)
+// Commercial airplane deliveries to India and South Asia (2023-2042)
 
-Regional Jet< 5
+// Regional Jet< 5
 
-Single Aisle2,320
+// Single Aisle2,320
 
-Widebody        380
+// Widebody        380
 
-Freighter        5
+// Freighter        5
 
-Total       2,705
+// Total       2,705
 
-The complete CMO is available at https://www.boeing.com/commercial/market/commercial-market-outlook/
+// The complete CMO is available at https://www.boeing.com/commercial/market/commercial-market-outlook/
 
  
 
-On Date:
-Friday, January 19, 2024`,
-    // src: image8,
-    alt: 'image'
-  }
+// On Date:
+// Friday, January 19, 2024`,
+  },
 ];
-
 
 export default NewsData;
